@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="banner.png" alt="Ethical Hacking Labs Banner" />
+</p>
+
 # 🛡️ Ethical Hacking Labs
 
 A collection of small security tools and projects for **ethical hacking practice**.  
