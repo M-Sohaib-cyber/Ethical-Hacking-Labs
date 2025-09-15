@@ -22,14 +22,13 @@ Scans a target host for open ports and reports results quickly.
 ---
 
 ## 📂 Project Structure
+```
 PortScanner/
 ├─ portscanner.py # Main script
 ├─ dist/ # Generated folder with the .exe
 │ └─ portscanner.exe
 └─ README.md # Project documentation
-
-yaml
-Copy code
+```
 
 ---
 
@@ -39,22 +38,20 @@ Copy code
 Make sure Python 3 is installed:  
 ```bash
 python --version
+```
 Run the scanner:
-
-bash
-Copy code
+```bash
 python portscanner.py
+```
 Then enter target and port range when prompted:
-
-yaml
-Copy code
+```bash
 Enter target IP or hostname: 127.0.0.1
 Enter start port: 20
 Enter end port: 100
+```
 Example output:
 
-objectivec
-Copy code
+```bash
 === 🔍 Python Port Scanner ===
 
 Scanning 127.0.0.1 from port 20 to 100...
@@ -65,13 +62,13 @@ Scanning 127.0.0.1 from port 20 to 100...
 ...
 
 ✅ Scan complete!
-2) Run as EXE (Windows)
+```
+
+### 2) Run as EXE (Windows)
 If you don’t want to install Python, you can run the pre-built .exe version:
 
-Build yourself with PyInstaller:
+### Build yourself with PyInstaller:
 
-bash
-Copy code
 python -m PyInstaller --onefile portscanner.py
 The .exe will appear in the dist/ folder.
 
@@ -79,14 +76,14 @@ Or, download from the GitHub Release (if published).
 
 Then just double-click portscanner.exe.
 
-🔒 Security Notes
+## 🔒 Security Notes
 ⚠️ Use this tool only on machines you own or have explicit permission to test.
 
 Unauthorized port scanning may violate laws or terms of service.
 
 Intended strictly for educational and ethical hacking labs.
 
-📖 Lessons Learned
+## 📖 Lessons Learned
 Built a practical security tool with Python.
 
 Learned how to use sockets and threading for networking tasks.
@@ -95,5 +92,6 @@ Packaged Python code into a portable .exe using PyInstaller.
 
 Reinforced ethical hacking practices.
 
-👨‍💻 Author: Mohammad Sohaib
+## 👨‍💻 Author: Mohammad Sohaib
 📌 BSc (Hons) Networks and Cyber Security student
+
