@@ -1,22 +1,22 @@
 # 🔐 Password Strength Checker
 
-A simple web app that checks the **strength of a password** and verifies if it has been exposed in data breaches using the [Have I Been Pwned](https://haveibeenpwned.com/API/v3#PwnedPasswords) API.  
+A simple web app that checks the **strength of a password** and verifies whether it has been exposed in data breaches using the [Have I Been Pwned (HIBP) Pwned Passwords API](https://haveibeenpwned.com/API/v3#PwnedPasswords).
 
 ---
 
 ## 🚀 Features
-- ✅ Password strength scoring (length, character variety, entropy)
-- ⚡ Uses the **k-anonymity model** with SHA-1 for secure breach checking
-- 📊 Provides actionable feedback and advice
+- ✅ Password strength scoring (length, character variety, simple entropy heuristics)  
+- ⚡ Breach checking using the **k-anonymity** model with SHA-1 (privacy-preserving)  
+- 📊 Actionable feedback and advice  
 - 🖥️ Local web UI — runs on `http://localhost:3000`
 
 ---
 
-## 🛠️ Tech Stack
-- [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/)
-- [node-fetch@2](https://www.npmjs.com/package/node-fetch) for API requests
-- [crypto](https://nodejs.org/api/crypto.html) (built-in, for SHA-1 hashing)
-- HTML + Vanilla JS frontend
+## 🛠️ Tech stack
+- **Node.js** + **Express.js**  
+- **node-fetch@2** for HTTP requests  
+- Node built-in **crypto** for SHA-1 hashing  
+- Simple HTML + vanilla JS frontend
 
 ---
 
@@ -24,19 +24,20 @@ A simple web app that checks the **strength of a password** and verifies if it h
 ## 📂 Project Structure
 ```
 Password-Checker/
-├─ server.js # Backend logic (API + HIBP integration)
+├─ server.js # Backend (API + HIBP integration)
 ├─ public/
 │ └─ index.html # Frontend UI
-├─ package.json # Dependencies
+├─ package.json
 ├─ package-lock.json
-└─ README.md # Project documentation
+└─ README.md
 ```
 
 ---
 
-## ⚙️ Setup & Usage
+## ⚙️ Setup & usage
 
 ### 1) Install dependencies
+From the `Password-Checker` folder:
 ```bash
 npm install
 ```
@@ -51,9 +52,14 @@ The server will start on:
 http://localhost:3000
 ```
 
-### 3) Test in your browser
+Open your browser at:
+```
+http://localhost:3000
+```
 
-Open the page and enter a test password. Example results:
+### 3) Test
+
+Enter a test password in the UI. Example response:
 ```vbnet
 Score: 35/100
 Pwned count: 13452
@@ -64,28 +70,52 @@ Advice:
 
 ---
 
-## 🔒 Security Notes
+## 🖼️ Screenshot
 
-⚠️ Never use real account passwords when testing.
-This tool is for educational and ethical hacking practice only.
+Here’s what the Password Checker UI looks like when running locally:
 
-The HIBP API is queried using k-anonymity: full passwords are never sent.
-
-Still, avoid testing actual production credentials.
+![Password Checker UI](Screenshot.png)
 
 ---
+## 🔒 Security & privacy notes (important)
 
-## 📖 Lessons Learned
+- Do not use real account passwords when testing on public or shared servers. This project is for local, educational use.
 
-Implemented password scoring based on strength rules
+- The HIBP API uses k-anonymity (only the first 5 hex chars of the SHA-1 hash are sent), so full passwords are never transmitted to HIBP. However, your server computes the SHA-1 locally — avoid deploying an open/public service that accepts arbitrary passwords unless you clearly warn users and secure the service.
 
-Integrated with an external API securely
+- Never log or store submitted passwords. If you accidentally committed any logs or node_modules/, remove or ignore them (see .gitignore below).
+  
+---
 
-Learned about k-anonymity and SHA-1 range search
+## 🧰 .gitignore (recommended)
 
-Built a local web tool for ethical hacking labs
+Create a .gitignore in this folder with:
+```lua
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.env
+```
+
+If node_modules/ was already committed, run:
+```bash
+git rm -r --cached node_modules
+git commit -m "Remove node_modules from repo"
+git push
+```
+
+## 📖 Lessons learned
+
+- Built a simple password scoring algorithm and local web UI
+
+- Integrated an external API securely using k-anonymity
+
+- Practiced safe handling and privacy-aware design for security tooling
 
 ---
 
 ## 👨‍💻 Author: Mohammad Sohaib
 📌 BSc (Hons) Networks and Cyber Security student
+
