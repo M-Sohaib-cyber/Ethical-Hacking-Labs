@@ -9,38 +9,86 @@ Each project is documented in its own folder with setup instructions, source cod
 
 ---
 
+## 📑 Table of Contents
+- [Projects](#-projects)  
+- [Purpose](#-purpose)  
+- [Security & Disclaimer](#-security--disclaimer)  
+- [Contributing](#-contributing)  
+- [Contact & License](#-contact--license)
+
+---
+
 ## 📂 Projects
 
-- 🔍 [Python Port Scanner](PortScanner/README.md)  
-  *A fast, multithreaded port scanner built with Python and packaged as a Windows `.exe`.*  
+- 🔍 [Python Port Scanner](PortScanner/README.md) — **✅ Ready**  
+  *A fast, multithreaded port scanner written in Python. Run (quick):*  
+  ```bash
+  python portscanner.py
+  ```
+  (Also packaged as a Windows .exe in PortScanner/dist.)
 
-- 🔐 Password Strength Checker *(coming soon)*  
-  *Test password strength with regex, entropy, and wordlist checks.*  
+- 🔐 Password Strength Checker — ##✅ Ready##
+  Node.js + Express web app that scores passwords and checks the Have I Been Pwned (HIBP) database via k-anonymity.
+Quick run:
+```bash
+# inside Password-Checker
+npm install
+node server.js
+# then open http://localhost:3000  
+```
 
-- 📡 Packet Sniffer *(coming soon)*  
-  *Capture and analyze packets with Python’s `scapy`.*  
+- 📡 Packet Sniffer (coming soon) — 🧪 In progress
+  Capture and analyse packets using Python + Scapy (lab-only).
 
-- 🌐 Web Vulnerability Scanner *(coming soon)*  
-  *Check for common issues like open redirects, XSS, and directory listings.*  
+- 🌐 Web Vulnerability Scanner (coming soon) — 🧪 Planned
+  Automated checks for common web issues (headers, simple XSS checks) — testing in lab environments. 
 
 ---
 
 ## 🎯 Purpose
 This repository is designed to:  
-- Strengthen my **hands-on ethical hacking skills**  
-- Provide **educational tools** for penetration testing labs  
-- Serve as a **portfolio** of my cybersecurity coding projects  
+- Strengthen hands-on ethical hacking and networking skills.  
+- Provide educational tools and lab exercises.  
+- Serve as a portfolio of reproducible security projects. 
 
 ---
 
-## ⚠️ Disclaimer
-- These tools are built **strictly for educational purposes**.  
-- Use them **only** on machines, networks, or systems you own or have explicit permission to test.  
-- The author is **not responsible** for misuse of these tools.  
+## ⚠️ Security & Disclaimer
+
+- Read before using any tools in this repo.
+
+- These tools are for educational and authorized testing only. Use them only on systems and networks you own or where you have explicit written permission.
+
+- Unauthorized scanning, fingerprinting, or intrusion attempts can be illegal and unethical. The author is not responsible for misuse.
+
+- Many tools here run locally. Do not expose the Password-Checker or similar services to public internet without clear user warnings and protections.
+
+- Always follow local laws and institutional policies when testing. 
 
 ---
 
-## 👨‍💻 Author
-**Mohammad Sohaib**  
-📌 BSc (Hons) Networks and Cyber Security student  
-🔐 Passionate about **ethical hacking, digital forensics, and networking**  
+## 🤝 Contributing
+
+Contributions, reports, and improvements are welcome. Please:
+
+1. Fork the repo.
+
+2. Create a topic branch.
+
+3. Open a PR with a clear description and usage notes.
+
+If you want to add a new lab, include:
+
+- A short README describing purpose & how to run the tool safely.
+
+- License & attribution for any third-party code.
+
+ ---
+
+ 📫 Contact & License
+
+Author: Mohammad Sohaib — BSc (Hons) Networks and Cyber Security
+
+- Portfolio: https://M-Sohaib-cyber.github.io
+
+- GitHub: https://github.com/M-Sohaib-cyber
