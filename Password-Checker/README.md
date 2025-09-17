@@ -73,9 +73,13 @@ Advice:
 ## 🖼️ Screenshot
 
 Here’s what the Password Checker UI looks like when running locally:
+
 - Password Checker
+  
 ![Password Checker UI](Screenshot.png)
+
 - Result of weak password
+  
 ![Password Checker UI](Screenshot1.png)
 ---
 ## 🔒 Security & privacy notes (important)
@@ -119,6 +123,7 @@ git push
 
 ## 👨‍💻 Author: Mohammad Sohaib
 📌 BSc (Hons) Networks and Cyber Security student
+
 
 
 
