@@ -29,13 +29,13 @@ Each project is documented in its own folder with setup instructions, source cod
 
 - 🔐 Password Strength Checker — ##✅ Ready##
   Node.js + Express web app that scores passwords and checks the Have I Been Pwned (HIBP) database via k-anonymity.
-Quick run:
-```bash
-# inside Password-Checker
-npm install
-node server.js
-# then open http://localhost:3000  
-```
+  Quick run:
+  ```bash
+  # inside Password-Checker
+  npm install
+  node server.js
+  # then open http://localhost:3000  
+  ```
 
 - 📡 Packet Sniffer (coming soon) — 🧪 In progress
   Capture and analyse packets using Python + Scapy (lab-only).
