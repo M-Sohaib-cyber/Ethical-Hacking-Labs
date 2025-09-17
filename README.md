@@ -74,9 +74,9 @@ If you want to add a new lab, include:
 
  ---
 
- 📫 Contact & License
+## 📫 Contact & License
+**Author:** Mohammad Sohaib — BSc (Hons) Networks and Cyber Security  
+- Portfolio: https://M-Sohaib-cyber.github.io  
+- GitHub: https://github.com/M-Sohaib-cyber  
 
-Author: Mohammad Sohaib — BSc (Hons) Networks and Cyber Security
-
-- Portfolio: https://M-Sohaib-cyber.github.io
-- GitHub: https://github.com/M-Sohaib-cyber
+📜 Licensed under the [MIT License](LICENSE).
