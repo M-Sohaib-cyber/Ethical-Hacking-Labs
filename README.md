@@ -56,13 +56,9 @@ This repository is designed to:
 ## ⚠️ Security & Disclaimer
 
 - Read before using any tools in this repo.
-
 - These tools are for educational and authorized testing only. Use them only on systems and networks you own or where you have explicit written permission.
-
 - Unauthorized scanning, fingerprinting, or intrusion attempts can be illegal and unethical. The author is not responsible for misuse.
-
 - Many tools here run locally. Do not expose the Password-Checker or similar services to public internet without clear user warnings and protections.
-
 - Always follow local laws and institutional policies when testing. 
 
 ---
@@ -72,15 +68,12 @@ This repository is designed to:
 Contributions, reports, and improvements are welcome. Please:
 
 1. Fork the repo.
-
 2. Create a topic branch.
-
 3. Open a PR with a clear description and usage notes.
 
 If you want to add a new lab, include:
 
 - A short README describing purpose & how to run the tool safely.
-
 - License & attribution for any third-party code.
 
  ---
@@ -90,5 +83,4 @@ If you want to add a new lab, include:
 Author: Mohammad Sohaib — BSc (Hons) Networks and Cyber Security
 
 - Portfolio: https://M-Sohaib-cyber.github.io
-
 - GitHub: https://github.com/M-Sohaib-cyber
