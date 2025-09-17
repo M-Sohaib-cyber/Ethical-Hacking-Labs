@@ -27,8 +27,8 @@ Each project is documented in its own folder with setup instructions, source cod
   ```
   (Also packaged as a Windows .exe in PortScanner/dist.)
 
-- 🔐 Password Strength Checker — ##✅ Ready##
-  Node.js + Express web app that scores passwords and checks the Have I Been Pwned (HIBP) database via k-anonymity.
+- 🔐 [Password Strength Checker](Password-Checker/README.md) — **✅ Ready**
+  Node.js + HIBP k-anonymity web app.
   Quick run:
   ```bash
   # inside Password-Checker
