@@ -28,7 +28,7 @@ Each project is documented in its own folder with setup instructions, source cod
   (Also packaged as a Windows .exe in PortScanner/dist.)
 
 - 🔐 [Password Strength Checker](Password-Checker/README.md) — **✅ Ready**
-  *Node.js + HIBP k-anonymity web app. Quick run:*
+  *Node.js + HIBP k-anonymity web app. Run (quick):*
   ```bash
   # inside Password-Checker
   npm install
