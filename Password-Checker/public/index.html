@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Password Checker</title>
+  <style>
+    body{font-family:Arial;background:#0d1117;color:#c9d1d9;padding:30px;}
+    input{padding:8px;width:300px;margin-right:8px;}
+    button{padding:8px;}
+    .result{margin-top:16px;background:#161b22;padding:12px;border-radius:6px;}
+  </style>
+</head>
+<body>
+  <h1>🔐 Password Strength Checker</h1>
+  <p><small>Local demo only — do not use real account passwords on public servers.</small></p>
+  <input id="pw" type="password" placeholder="Enter password to test" />
+  <button onclick="check()">Check</button>
+
+  <div id="out" class="result" style="display:none"></div>
+
+  <script>
+    async function check(){
+      const pw = document.getElementById('pw').value;
+      if(!pw){ alert('Enter a password'); return; }
+      const res = await fetch('/api/check', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ password: pw })
+      });
+      const data = await res.json();
+      document.getElementById('out').style.display = 'block';
+      if(data.error){ document.getElementById('out').innerText = 'Error: '+data.error; return; }
+      document.getElementById('out').innerHTML =
+        `<strong>Score:</strong> ${data.score}/100<br>
+         <strong>Pwned count:</strong> ${data.pwnedCount}<br>
+         <strong>Advice:</strong><br> - ${data.advice.join('<br> - ')}`;
+    }
+  </script>
+</body>
+</html>
